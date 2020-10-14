@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { Route } from "react-router-dom";
 import "./App.css";
 
 import Header from "./components/Header";
@@ -7,6 +8,7 @@ import Home from "./components/Home";
 import SearchBar from "./components/SearchBar";
 import CreateRecipe from "./components/CreateRecipe";
 import TitleCard from "./components/TitleCard";
+import NonAlcoholic from "./components/NonAlcoholic";
 
 function App() {
   const [recipes, setRecipes] = useState([]);
@@ -19,6 +21,7 @@ function App() {
   const [clearSearch, setClearSearch] = useState(false);
   const [homeToggle, setHomeToggle] = useState(false);
   const [titleCard, setTitleCard] = useState(false);
+  const [ageToggle, setAgeToggle] = useState(false);
 
   useEffect(() => {
     const makeApiCall = async () => {
@@ -41,7 +44,12 @@ function App() {
         setTitleCard={setTitleCard}
         homeToggle={homeToggle}
         setHomeToggle={setHomeToggle}
+        ageToggle={ageToggle}
+        setAgeToggle={setAgeToggle}
       />
+      <Route exact path="/non-alcoholic">
+        <NonAlcoholic ageToggle={ageToggle} setAgeToggle={setAgeToggle} />
+      </Route>
       <Header
         nav={nav}
         setNav={setNav}

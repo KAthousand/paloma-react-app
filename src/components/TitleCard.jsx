@@ -1,14 +1,20 @@
 import React from "react";
-import { Link, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./TitleCard.css";
 
 function TitleCard(props) {
   const { titleCard, setTitleCard } = props;
   const { homeToggle, setHomeToggle } = props;
+  const { ageToggle, setAgeToggle } = props;
 
   const oldEnough = () => {
     setTitleCard(!titleCard);
     setHomeToggle(!homeToggle);
+  };
+
+  const tooYoung = () => {
+    setTitleCard(!titleCard);
+    setAgeToggle(!ageToggle);
   };
 
   return (
@@ -20,7 +26,9 @@ function TitleCard(props) {
       <h1>paloma</h1>
       <p> are you old?</p>
       <button onClick={oldEnough}>yes</button>
-      <button>no</button>
+      <Link to={"/non-alcoholic"}>
+        <button onClick={tooYoung}>no</button>
+      </Link>
     </div>
   );
 }

@@ -52,7 +52,12 @@ function Recipes(props) {
           setEdit={setEdit}
         />
       </div>
-      <button onClick={() => setClearSearch(!clearSearch)}>Clear Search</button>
+      <div className={response.length < 1 ? "no-result" : "hide"}>
+        <h5>No results found</h5>
+      </div>
+      <button onClick={() => setClearSearch(!clearSearch)}>
+        {response.length < 1 ? "Show All Recipes" : "Clear Search"}
+      </button>
     </div>
   );
 }

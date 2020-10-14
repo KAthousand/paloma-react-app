@@ -27,12 +27,14 @@ function SearchBar(props) {
           if (word.includes(search)) {
             !response.includes(recipe) &&
               setResponse((oldArray) => [...oldArray, recipe]);
+          } else {
           }
         });
       });
 
     !recipeToggle && setRecipeToggle(!recipeToggle);
     !clearSearch && setClearSearch(!clearSearch);
+    cardToggle && setCardToggle(!cardToggle);
     setSearch("");
   };
 
