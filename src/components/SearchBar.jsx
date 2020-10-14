@@ -16,21 +16,21 @@ function SearchBar(props) {
     e.preventDefault();
     //make sure response is empty before search to clear old searches
     setResponse([]);
-
+    // setSearch(search.toLowerCase());
     //when recipes is being passed as a prop...
     recipes &&
       // map recipes to look at each recipe
       recipes.map((recipe) => {
-        // console.log(`${search}`);
-        // console.log(Object.values(recipe.fields));
-        // create container for object values
         let words = Object.values(recipe.fields);
-        // if object values includes search
-        words.includes(search) &&
-          setResponse((oldArray) => [...oldArray, recipe]);
+        words.map((word) => {
+          // if (word.toLowerCase().includes(search))
+          if (word.includes(search)) {
+            !response.includes(recipe) &&
+              setResponse((oldArray) => [...oldArray, recipe]);
+          }
+        });
       });
 
-    // console.log(response);
     !recipeToggle && setRecipeToggle(!recipeToggle);
     !clearSearch && setClearSearch(!clearSearch);
     setSearch("");
@@ -40,6 +40,7 @@ function SearchBar(props) {
     console.log(response);
   }, [response]);
 
+  // console.log(typeof search === "string");
   return (
     <div>
       <div className="search-container">

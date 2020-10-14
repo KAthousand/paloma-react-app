@@ -1,0 +1,16 @@
+.title-card-container {
+  height: 0vh;
+  width: 100%;
+  z-index: 100;
+  background-color: pink;
+  position: fixed;
+  top: 0;
+  visibility: hidden;
+  transition: visibility 0.7s, height 0.7s;
+  transition-timing-function: cubic-bezier(0.82, 0.01, 0.77, 0.78);
+}
+
+.title-open {
+  visibility: visible;
+  height: 100vh;
+}
