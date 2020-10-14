@@ -1,22 +1,26 @@
 .home-background {
   background-color: grey;
+  display: flex;
+  justify-content: center;
+  align-content: center;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
 }
 
 .home-container {
   background-color: antiquewhite;
-  height: 80vh;
-  width: 0vw;
-  right: 0;
+  height: 50vh;
+  width: 80vw;
+  left: -80vw;
   position: fixed;
-  /* z-index: 2; */
   top: 10vh;
   visibility: hidden;
-  transition: visibility 0.7s, width 0.7s;
+  transition: visibility 1s, left 1s;
   transition-timing-function: cubic-bezier(0.82, 0.01, 0.77, 0.78);
 }
 .home-open {
   visibility: visible;
-  width: 100vw;
+  top: 25vh;
+  left: 10vw;
+  width: 80vw;
 }

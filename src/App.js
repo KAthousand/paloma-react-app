@@ -55,20 +55,7 @@ function App() {
         setEdit={setEdit}
       />
       <div className="content-container">
-        <Home
-          recipes={recipes}
-          setCardToggle={setCardToggle}
-          fetchRecipe={fetchRecipe}
-          setFetchRecipe={setFetchRecipe}
-          edit={edit}
-          setEdit={setEdit}
-          clearSearch={clearSearch}
-          setClearSearch={setClearSearch}
-          homeToggle={homeToggle}
-          setHomeToggle={setHomeToggle}
-          cardToggle={cardToggle}
-          setCardToggle={setCardToggle}
-        />
+        <Home recipes={recipes} homeToggle={homeToggle} />
         <CreateRecipe
           createToggle={createToggle}
           setCreateToggle={setCreateToggle}
