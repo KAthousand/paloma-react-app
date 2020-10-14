@@ -1,0 +1,36 @@
+.search-container {
+  background-color: orange;
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  position: fixed;
+  bottom: 0;
+}
+.form-container {
+  border: 2px solid purple;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.recipes-container {
+  background-color: orange;
+  position: fixed;
+  z-index: 1;
+  bottom: 10vh;
+  height: 0vh;
+  width: 100vw;
+  visibility: hidden;
+  transition: visibility 0.7s, height 0.7s;
+  transition-timing-function: cubic-bezier(0.82, 0.01, 0.77, 0.78);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.recipes-open {
+  visibility: visible;
+  height: 80vh;
+}

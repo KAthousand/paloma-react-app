@@ -1,0 +1,33 @@
+.header-container {
+  background-color: green;
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+.nav-bar-container {
+  border: 2px solid red;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-menu-container {
+  background-color: green;
+  position: fixed;
+  z-index: 2;
+  top: 10vh;
+  left: 0;
+  height: 0vh;
+  width: 100vw;
+  visibility: hidden;
+  transition: visibility 0.7s, height 0.7s;
+  transition-timing-function: cubic-bezier(0.82, 0.01, 0.77, 0.78);
+}
+
+.nav-is-open {
+  visibility: visible;
+  height: 80vh;
+}
