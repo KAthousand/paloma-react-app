@@ -1,0 +1,15 @@
+.create-recipe-container {
+  background-color: pink;
+  height: 80vh;
+  width: 0vw;
+  right: 0;
+  position: fixed;
+  top: 10vh;
+  visibility: hidden;
+  transition: visibility 0.7s, width 0.7s;
+  transition-timing-function: cubic-bezier(0.82, 0.01, 0.77, 0.78);
+}
+.create-open {
+  visibility: visible;
+  width: 100vw;
+}

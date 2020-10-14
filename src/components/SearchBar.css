@@ -19,7 +19,7 @@
 .recipes-container {
   background-color: orange;
   position: fixed;
-  z-index: 1;
+  /* z-index: 1; */
   bottom: 10vh;
   height: 0vh;
   width: 100vw;

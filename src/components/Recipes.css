@@ -1,0 +1,15 @@
+.recipe-cards-container {
+  background-color: orange;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.recipe-cards {
+  border: 2px solid purple;
+  width: 20vh;
+  height: 20vh;
+  margin: 20px;
+}

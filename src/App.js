@@ -5,12 +5,16 @@ import "./App.css";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import SearchBar from "./components/SearchBar";
+import CreateRecipe from "./components/CreateRecipe";
 
 function App() {
   const [recipes, setRecipes] = useState([]);
   const [fetchRecipe, setFetchRecipe] = useState(false);
   const [nav, setNav] = useState(false);
   const [recipeToggle, setRecipeToggle] = useState(false);
+  const [createToggle, setCreateToggle] = useState(false);
+  const [cardToggle, setCardToggle] = useState(false);
+  const [edit, setEdit] = useState(false);
 
   useEffect(() => {
     const makeApiCall = async () => {
@@ -33,15 +37,33 @@ function App() {
         setNav={setNav}
         recipeToggle={recipeToggle}
         setRecipeToggle={setRecipeToggle}
+        createToggle={createToggle}
+        setCreateToggle={setCreateToggle}
+        cardToggle={cardToggle}
+        setCardToggle={setCardToggle}
+        edit={edit}
+        setEdit={setEdit}
       />
-      <div>
-        <Home />
+      <div className="content-container">
+        <Home recipes={recipes} />
+        <CreateRecipe
+          createToggle={createToggle}
+          setCreateToggle={setCreateToggle}
+          fetchRecipe={fetchRecipe}
+          setFetchRecipe={setFetchRecipe}
+        />
       </div>
       <SearchBar
         nav={nav}
         recipes={recipes}
         recipeToggle={recipeToggle}
         setRecipeToggle={setRecipeToggle}
+        cardToggle={cardToggle}
+        setCardToggle={setCardToggle}
+        fetchRecipe={fetchRecipe}
+        setFetchRecipe={setFetchRecipe}
+        edit={edit}
+        setEdit={setEdit}
       />
     </div>
   );

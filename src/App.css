@@ -5,3 +5,8 @@
 .hide {
   display: none;
 }
+
+.content-container {
+  height: 100%;
+  position: relative;
+}

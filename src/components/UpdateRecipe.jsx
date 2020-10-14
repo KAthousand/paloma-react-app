@@ -1,38 +1,79 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "./CreateRecipe.css";
+import "./UpdateRecipe.css";
 
-function CreateRecipe(props) {
-  const [name, setName] = useState("");
-  const [amount1, setAmount1] = useState("");
-  const [ingredients1, setIngredients1] = useState("");
-  const [amount2, setAmount2] = useState("");
-  const [ingredients2, setIngredients2] = useState("");
-  const [amount3, setAmount3] = useState("");
-  const [ingredients3, setIngredients3] = useState("");
-  const [amount4, setAmount4] = useState("");
-  const [ingredients4, setIngredients4] = useState("");
-  const [amount5, setAmount5] = useState("");
-  const [ingredients5, setIngredients5] = useState("");
-  const [amount6, setAmount6] = useState("");
-  const [ingredients6, setIngredients6] = useState("");
-  const [amount7, setAmount7] = useState("");
-  const [ingredients7, setIngredients7] = useState("");
-  const [amount8, setAmount8] = useState("");
-  const [ingredients8, setIngredients8] = useState("");
-  const [amount9, setAmount9] = useState("");
-  const [ingredients9, setIngredients9] = useState("");
-  const [amount10, setAmount10] = useState("");
-  const [ingredients10, setIngredients10] = useState("");
-  const [garnish, setGarnish] = useState("");
-  const [instructions, setInstructions] = useState("");
-  const [glassware, setGlassware] = useState("");
-  const [history, setHistory] = useState("");
-  const [category, setCategory] = useState("");
-  const [flavorProfile, setFlavorProfile] = useState("");
-
-  const { createToggle } = props;
+function UpdateRecipe(props) {
+  const { edit, setEdit } = props;
+  const { recipe } = props;
   const { fetchRecipe, setFetchRecipe } = props;
+
+  const [name, setName] = useState(
+    recipe.fields.name ? recipe.fields.name : ""
+  );
+  const [amount1, setAmount1] = useState(recipe.fields.amount1);
+  const [ingredients1, setIngredients1] = useState(recipe.fields.ingredients1);
+  const [amount2, setAmount2] = useState(
+    recipe.fields.amount2 ? recipe.fields.amount2 : ""
+  );
+  const [ingredients2, setIngredients2] = useState(
+    recipe.fields.ingredients2 ? recipe.fields.ingredients2 : ""
+  );
+  const [amount3, setAmount3] = useState(
+    recipe.fields.amount3 ? recipe.fields.amount3 : ""
+  );
+  const [ingredients3, setIngredients3] = useState(
+    recipe.fields.ingredients3 ? recipe.fields.ingredients3 : ""
+  );
+  const [amount4, setAmount4] = useState(
+    recipe.fields.amount4 ? recipe.fields.amount4 : ""
+  );
+  const [ingredients4, setIngredients4] = useState(
+    recipe.fields.ingredients4 ? recipe.fields.ingredients4 : ""
+  );
+  const [amount5, setAmount5] = useState(
+    recipe.fields.amount5 ? recipe.fields.amount5 : ""
+  );
+  const [ingredients5, setIngredients5] = useState(
+    recipe.fields.ingredients5 ? recipe.fields.ingredients5 : ""
+  );
+  const [amount6, setAmount6] = useState(
+    recipe.fields.amount6 ? recipe.fields.amount6 : ""
+  );
+  const [ingredients6, setIngredients6] = useState(
+    recipe.fields.ingredients6 ? recipe.fields.ingredients6 : ""
+  );
+  const [amount7, setAmount7] = useState(
+    recipe.fields.amount7 ? recipe.fields.amount7 : ""
+  );
+  const [ingredients7, setIngredients7] = useState(
+    recipe.fields.ingredients7 ? recipe.fields.ingredients7 : ""
+  );
+  const [amount8, setAmount8] = useState(
+    recipe.fields.amount8 ? recipe.fields.amount8 : ""
+  );
+  const [ingredients8, setIngredients8] = useState(
+    recipe.fields.ingredients8 ? recipe.fields.ingredients8 : ""
+  );
+  const [amount9, setAmount9] = useState(
+    recipe.fields.amount9 ? recipe.fields.amount9 : ""
+  );
+  const [ingredients9, setIngredients9] = useState(
+    recipe.fields.ingredients9 ? recipe.fields.ingredients9 : ""
+  );
+  const [amount10, setAmount10] = useState(
+    recipe.fields.amount10 ? recipe.fields.amount10 : ""
+  );
+  const [ingredients10, setIngredients10] = useState(
+    recipe.fields.ingredients10 ? recipe.fields.ingredients10 : ""
+  );
+  const [garnish, setGarnish] = useState(recipe.fields.garnish);
+  const [instructions, setInstructions] = useState(recipe.fields.instructions);
+  const [glassware, setGlassware] = useState(recipe.fields.glassware);
+  const [history, setHistory] = useState(recipe.fields.history);
+  const [category, setCategory] = useState(recipe.fields.category);
+  const [flavorProfile, setFlavorProfile] = useState(
+    recipe.fields.flavorProfile
+  );
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -66,8 +107,8 @@ function CreateRecipe(props) {
       flavorProfile,
     };
 
-    const airtableURL = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/cocktails`;
-    await axios.post(
+    const airtableURL = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/cocktails/${recipe.id}`;
+    await axios.put(
       airtableURL,
       { fields },
       {
@@ -105,17 +146,13 @@ function CreateRecipe(props) {
     setHistory("");
     setCategory("");
     setFlavorProfile("");
-  };
 
+    setEdit(!edit);
+  };
+  // console.log(recipe.id);
   return (
-    <div
-      className={
-        createToggle
-          ? "create-recipe-container create-open"
-          : "create-recipe-container"
-      }
-    >
-      <h3>Create Recipe Page</h3>
+    <div>
+      <h3>Update Recipe</h3>
       <form onSubmit={handleSubmit}>
         <label htmlFor="name"></label>
         <input
@@ -382,9 +419,10 @@ function CreateRecipe(props) {
         />
         <br />
         <button type="submit">Submit</button>
+        <button onClick={() => setEdit(!edit)}>Back</button>
       </form>
     </div>
   );
 }
 
-export default CreateRecipe;
+export default UpdateRecipe;
