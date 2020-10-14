@@ -5,8 +5,10 @@ import "./Recipes.css";
 function Recipes(props) {
   const { fetchRecipe, setFetchRecipe } = props;
   const { cardToggle, setCardToggle } = props;
+  const { response } = props;
   const { recipes } = props;
   const { edit, setEdit } = props;
+  const { clearSearch, setClearSearch } = props;
   const [selection, setSelection] = useState("");
 
   function handleSelect(recipe) {
@@ -18,16 +20,25 @@ function Recipes(props) {
   return (
     <div>
       <div className="recipe-cards-container">
-        {/* <h4 className="recipe-title">Recipe page.</h4> */}
-        {recipes.map((recipe) => (
-          <button
-            onClick={() => handleSelect(recipe)}
-            className="recipe-cards"
-            key={recipe.id}
-          >
-            {recipe.fields.name}
-          </button>
-        ))}
+        {clearSearch
+          ? response.map((response) => (
+              <button
+                onClick={() => handleSelect(response)}
+                className="recipe-cards"
+                key={response.id}
+              >
+                {response.fields.name}
+              </button>
+            ))
+          : recipes.map((recipe) => (
+              <button
+                onClick={() => handleSelect(recipe)}
+                className={clearSearch ? "hide" : "recipe-cards"}
+                key={recipe.id}
+              >
+                {recipe.fields.name}
+              </button>
+            ))}
       </div>
       <div>
         <Card
@@ -41,6 +52,7 @@ function Recipes(props) {
           setEdit={setEdit}
         />
       </div>
+      <button onClick={() => setClearSearch(!clearSearch)}>Clear Search</button>
     </div>
   );
 }

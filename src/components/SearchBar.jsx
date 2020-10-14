@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Recipes from "./Recipes";
 import "./SearchBar.css";
 
@@ -10,19 +10,36 @@ function SearchBar(props) {
   const { cardToggle, setCardToggle } = props;
   const { recipes } = props;
   const { edit, setEdit } = props;
+  const { clearSearch, setClearSearch } = props;
 
   const handleSearch = (e) => {
     e.preventDefault();
-    recipes.length >= 1 &&
+    //make sure response is empty before search to clear old searches
+    setResponse([]);
+
+    //when recipes is being passed as a prop...
+    recipes &&
+      // map recipes to look at each recipe
       recipes.map((recipe) => {
-        let fields = Object.values(recipe.fields);
-        fields.includes(search)
-          ? setResponse((oldArray) => [...oldArray, recipe])
-          : console.log(`wrong item`);
+        // console.log(`${search}`);
+        // console.log(Object.values(recipe.fields));
+        // create container for object values
+        let words = Object.values(recipe.fields);
+        // if object values includes search
+        words.includes(search) &&
+          setResponse((oldArray) => [...oldArray, recipe]);
       });
-    console.log(response);
+
+    // console.log(response);
     !recipeToggle && setRecipeToggle(!recipeToggle);
+    !clearSearch && setClearSearch(!clearSearch);
+    setSearch("");
   };
+
+  useEffect(() => {
+    console.log(response);
+  }, [response]);
+
   return (
     <div>
       <div className="search-container">
@@ -45,6 +62,7 @@ function SearchBar(props) {
           }
         >
           <Recipes
+            response={response}
             recipes={recipes}
             cardToggle={cardToggle}
             setCardToggle={setCardToggle}
@@ -52,8 +70,9 @@ function SearchBar(props) {
             setFetchRecipe={setFetchRecipe}
             edit={edit}
             setEdit={setEdit}
+            clearSearch={clearSearch}
+            setClearSearch={setClearSearch}
           />
-          <button>hello</button>
         </div>
       </div>
     </div>

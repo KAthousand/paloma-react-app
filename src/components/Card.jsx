@@ -6,7 +6,7 @@ import "./Card.css";
 function Card(props) {
   const [deleted, setDeleted] = useState(false);
 
-  const { edit, setEdit } = useState(false);
+  const { edit, setEdit } = props;
   const { selection } = props;
   const { cardToggle, setCardToggle } = props;
   const { fetchRecipe, setFetchRecipe } = props;
@@ -42,7 +42,7 @@ function Card(props) {
       <h3>Instructions</h3>
       {selection && <p>{selection.fields.instructions}</p>}
       <button onClick={() => setEdit(!edit)}>Edit</button>
-      <button onClick={handleDelete}>Delete</button>
+      <button onClick={handleDelete}>{deleted ? "Deleted" : "Delete"}</button>
       <div
         className={edit ? "update-container update-open" : "update-container"}
       >

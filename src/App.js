@@ -15,6 +15,7 @@ function App() {
   const [createToggle, setCreateToggle] = useState(false);
   const [cardToggle, setCardToggle] = useState(false);
   const [edit, setEdit] = useState(false);
+  const [clearSearch, setClearSearch] = useState(false);
 
   useEffect(() => {
     const makeApiCall = async () => {
@@ -64,6 +65,8 @@ function App() {
         setFetchRecipe={setFetchRecipe}
         edit={edit}
         setEdit={setEdit}
+        clearSearch={clearSearch}
+        setClearSearch={setClearSearch}
       />
     </div>
   );
