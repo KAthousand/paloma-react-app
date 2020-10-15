@@ -80,11 +80,30 @@
 }
 
 .random-content-container {
-  height: 100%;
+  height: 42vh;
   width: 100%;
-  /* border: 1px solid red; */
   margin: 10px 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.random-card-top-container {
+  display: flex;
+}
+.random-ingredients {
+  margin-right: 10px;
+  width: 60%;
+}
+.random-history,
+.random-instructions {
+  margin-top: 10px;
+}
+.random-category-flavors {
+  margin-top: 10px;
+  display: flex;
+}
+.random-category {
+  margin-right: 50px;
 }

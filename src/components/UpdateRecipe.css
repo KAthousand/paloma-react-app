@@ -1,18 +1,79 @@
 .update-container {
-  background-color: orange;
+  background-color: var(--color-light-pink);
   position: fixed;
   /* z-index: 1; */
-  bottom: 10vh;
-  height: 0vh;
+  bottom: -50vh;
+  height: 50vh;
+  left: 0vh;
   width: 100vw;
   visibility: hidden;
-  transition: visibility 0.7s, height 0.7s;
+  transition: visibility 0.7s, bottom 0.7s;
   transition-timing-function: cubic-bezier(0.82, 0.01, 0.77, 0.78);
   overflow-x: hidden;
   overflow-y: auto;
+  border-radius: 15px 15px 0 0;
 }
-
 .update-open {
   visibility: visible;
-  height: 50vh;
+  bottom: 10vh;
+}
+.update-title-container {
+  background-color: var(--color-pink);
+  border-radius: 15px 15px 0 0;
+  padding: 10px 0;
+  text-align: center;
+}
+.update-title {
+  font-family: var(--font-header);
+  letter-spacing: 1px;
+  color: var(--color-dark-green);
+}
+.update-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 25px 0;
+}
+.update-form input {
+  margin: 5px;
+  font-family: var(--font-content);
+  color: var(--color-dark-green);
+  background-color: var(--color-light);
+  border: 1.5px solid var(--color-pink);
+  border-radius: 3px;
+}
+.update-ingredients-container {
+  display: flex;
+  justify-content: center;
+}
+.update-amount {
+  width: 20%;
+}
+.update-ingredients {
+  width: 57%;
+}
+.update-name,
+.update-garnish,
+.update-instructions,
+.update-glassware,
+.update-history,
+.update-category,
+.updateflavor-profile {
+  width: 80%;
+}
+.update-submit {
+  border: none;
+  border-radius: 10px;
+  margin-top: 25px;
+  height: 5vh;
+  width: 80%;
+  font-family: var(--font-header);
+  letter-spacing: 1px;
+  background-color: var(--color-pink);
+  color: var(--color-light-pink);
+  transition: 0.5s;
+}
+.update-submit:hover {
+  background-color: var(--color-dark-green);
 }

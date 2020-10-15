@@ -1,16 +1,98 @@
 .card-container {
-  background-color: antiquewhite;
-  height: 80vh;
-  width: 0vw;
-  right: 0;
+  background-color: var(--color-dark-green);
+  height: 75vh;
+  width: 90vw;
+  right: -90vw;
   position: fixed;
-  /* z-index: 2; */
-  top: 10vh;
+  top: 12.5vh;
+  border-radius: 20px;
+  box-shadow: 10px 10px 20px rgba(42, 42, 42, 0.25);
   visibility: hidden;
-  transition: visibility 0.7s, width 0.7s;
+  transition: visibility 0.7s, right 0.7s;
   transition-timing-function: cubic-bezier(0.82, 0.01, 0.77, 0.78);
 }
 .card-open {
   visibility: visible;
-  width: 100vw;
+  right: 5vw;
+}
+
+.card-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+}
+.card-info {
+  position: relative;
+  height: 70%;
+  bottom: -30%;
+  border-radius: 0 0 20px 20px;
+  background-color: var(--color-light-green);
+  color: var(--color-light);
+  font-family: var(--font-italic);
+  padding: 5px 10px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+.card-info p {
+  font-size: 0.9em;
+  line-height: 17px;
+  margin-left: 5px;
+}
+.card-name {
+  color: var(--color-light-pink);
+  font-family: var(--font-header);
+  letter-spacing: 3px;
+  font-size: 3em;
+  text-shadow: var(--color-dark) 0px 0px 3px;
+  -webkit-font-smoothing: antialiased;
+  position: fixed;
+  top: 10vh;
+  left: 1vh;
+}
+.card-header {
+  font-family: var(--font-header);
+  color: var(--color-light-pink);
+  letter-spacing: 1px;
+  margin-top: 5px;
+  font-size: 0.8em;
+}
+.card-ingredients {
+  margin-bottom: 5px;
+  width: 55%;
+}
+.card-instructions,
+.card-history {
+  margin-bottom: 5px;
+  width: 95%;
+}
+.card-category-flavors {
+  margin-bottom: 5px;
+  display: flex;
+  width: 100%;
+}
+.card-category {
+  margin-right: 30px;
+}
+.card-button-container {
+  display: flex;
+  width: 100%;
+  margin: 10px 0;
+  justify-content: space-evenly;
+}
+.card-button-container button {
+  border: none;
+  border-radius: 5px;
+  background-color: var(--color-light-pink);
+  color: var(--color-dark-green);
+  font-family: var(--font-header);
+  letter-spacing: 1px;
+  padding: 5px 20px;
+}
+
+.card-button-container button:hover {
+  background-color: var(--color-pink);
+  color: var(--color-dark-green);
 }
