@@ -14,23 +14,21 @@ function SearchBar(props) {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    //make sure response is empty before search to clear old searches
+
     setResponse([]);
-    // setSearch(search.toLowerCase());
-    //when recipes is being passed as a prop...
-    recipes &&
-      // map recipes to look at each recipe
-      recipes.map((recipe) => {
-        let words = Object.values(recipe.fields);
-        words.map((word) => {
-          // if (word.toLowerCase().includes(search))
-          if (word.includes(search)) {
-            !response.includes(recipe) &&
-              setResponse((oldArray) => [...oldArray, recipe]);
-          } else {
-          }
-        });
-      });
+    // // setSearch(search.toLowerCase());
+    // recipes &&
+    //   recipes.map((recipe) => {
+    //     let words = Object.values(recipe.fields);
+    //     words.map((word) => {
+    //       // if (word.toLowerCase().includes(search))
+    //       if (word.includes(search)) {
+    //         !response.includes(recipe) &&
+    //           setResponse((oldArray) => [...oldArray, recipe]);
+    //       } else {
+    //       }
+    //     });
+    //   });
 
     !recipeToggle && setRecipeToggle(!recipeToggle);
     !clearSearch && setClearSearch(!clearSearch);

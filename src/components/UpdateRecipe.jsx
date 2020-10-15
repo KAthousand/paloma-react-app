@@ -3,7 +3,7 @@ import axios from "axios";
 import "./UpdateRecipe.css";
 
 function UpdateRecipe(props) {
-  const { cardToggle, setCardToggle } = props;
+  // const { cardToggle, setCardToggle } = props;
   const { edit, setEdit } = props;
   const { recipe } = props;
   const { fetchRecipe, setFetchRecipe } = props;
