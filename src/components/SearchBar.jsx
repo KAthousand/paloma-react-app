@@ -49,13 +49,16 @@ function SearchBar(props) {
         <form className="form-container" onSubmit={handleSearch}>
           <label htmlFor="search"></label>
           <input
+            className="searchbar-input"
             name="input"
             type="text"
             placeholder="Find A Recipe"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
-          <button type="Submit">Submit</button>
+          <button className="submit-search-button" type="Submit">
+            <i class="fa fa-search"></i>
+          </button>
         </form>
         <div
           className={
