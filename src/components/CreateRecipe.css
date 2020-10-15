@@ -115,3 +115,20 @@
   font-family: var(--font-content);
   font-size: 0.75em;
 }
+
+@media only screen and (min-width: 650px) {
+  .create-recipe-container {
+    max-width: 485px;
+  }
+  .create-open {
+    visibility: visible;
+    right: 20%;
+  }
+}
+
+@media only screen and (min-width: 1030px) {
+  .create-open {
+    visibility: visible;
+    right: 30%;
+  }
+}

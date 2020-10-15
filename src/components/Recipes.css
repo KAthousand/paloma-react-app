@@ -24,3 +24,31 @@
 .recipe-cards:hover {
   opacity: 30%;
 }
+
+.search-resp-buttons {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.no-result {
+  color: var(--color-light-pink);
+  font-family: var(--font-header);
+  letter-spacing: 1px;
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+.search-resp-buttons button {
+  background-color: var(--color-light-pink);
+  color: var(--color-light-green);
+  border-radius: 5px;
+  font-size: 2em;
+  border: 1px solid var(--color-light-green);
+  padding: 10px;
+  transition: 0.5s;
+}
+.search-resp-buttons button:hover {
+  background-color: var(--color-light-green);
+  color: var(--color-dark-green);
+}

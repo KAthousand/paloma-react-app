@@ -25,7 +25,7 @@ function TitleCard(props) {
     >
       <div className="title-content">
         <h1>PALOMA</h1>
-        <p> Are you at least 21 years of age?</p>
+        <p> Are you at least 21 years old?</p>
         <div className="title-buttons">
           <button onClick={oldEnough} className="title-button">
             yes

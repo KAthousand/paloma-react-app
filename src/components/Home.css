@@ -26,7 +26,6 @@
   visibility: visible;
   top: 12vh;
   left: 7.5vw;
-  width: 85vw;
 }
 
 .home-card {
@@ -106,4 +105,21 @@
 }
 .random-category {
   margin-right: 50px;
+}
+
+@media only screen and (min-width: 650px) {
+  .home-container {
+    max-width: 485px;
+  }
+  .home-open {
+    visibility: visible;
+    left: 20%;
+  }
+}
+
+@media only screen and (min-width: 1030px) {
+  .home-open {
+    visibility: visible;
+    left: 40%;
+  }
 }

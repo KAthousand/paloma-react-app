@@ -36,11 +36,6 @@ function Header(props) {
     edit && setEdit(!edit);
   };
 
-  // const toggleAll = () => {
-  //   setNav(!nav);
-  //   recipeToggle && setRecipeToggle(!recipeToggle);
-  // };
-
   return (
     <div className="header-container">
       <nav className="nav-bar-container">

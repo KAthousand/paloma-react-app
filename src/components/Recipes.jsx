@@ -52,13 +52,17 @@ function Recipes(props) {
           setEdit={setEdit}
         />
       </div>
-      <div className={response.length < 1 ? "no-result" : "hide"}>
-        <h5>No results found</h5>
+      <div className={clearSearch ? "search-resp-buttons" : "hide"}>
+        <div className="no-result">
+          <h5>No results found</h5>
+        </div>
+        <button
+          onClick={() => setClearSearch(!clearSearch)}
+          className="no-result"
+        >
+          Clear Search
+        </button>
       </div>
-      <button onClick={() => setClearSearch(!clearSearch)}>
-        {/* maybe make above a function to also set response to [] */}
-        {response.length < 1 ? "Show All Recipes" : "Clear Search"}
-      </button>
     </div>
   );
 }
