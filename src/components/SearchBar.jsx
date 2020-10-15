@@ -16,19 +16,22 @@ function SearchBar(props) {
     e.preventDefault();
 
     setResponse([]);
-    // // setSearch(search.toLowerCase());
-    // recipes &&
-    //   recipes.map((recipe) => {
-    //     let words = Object.values(recipe.fields);
-    //     words.map((word) => {
-    //       // if (word.toLowerCase().includes(search))
-    //       if (word.includes(search)) {
-    //         !response.includes(recipe) &&
-    //           setResponse((oldArray) => [...oldArray, recipe]);
-    //       } else {
-    //       }
-    //     });
-    //   });
+    // setSearch(search.toLowerCase());
+    recipes &&
+      recipes.map((recipe) => {
+        let words = Object.values(recipe.fields);
+        words.map((word) => {
+          // if (word.toLowerCase().includes(search))
+          if (word.includes(search)) {
+            !response.includes(recipe) &&
+              setResponse((oldArray) => [...oldArray, recipe]);
+            return true;
+          } else {
+          }
+          return true;
+        });
+        return true;
+      });
 
     !recipeToggle && setRecipeToggle(!recipeToggle);
     !clearSearch && setClearSearch(!clearSearch);
