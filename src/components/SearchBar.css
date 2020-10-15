@@ -1,5 +1,5 @@
 .search-container {
-  background-color: var(--color-light-green);
+  background-color: var(--color-pink);
   height: 10vh;
   width: 100%;
   display: flex;
@@ -16,7 +16,7 @@
 }
 
 .recipes-container {
-  background-color: var(--color-light-green);
+  background-color: var(--color-pink);
   position: fixed;
   /* z-index: 1; */
   bottom: 10vh;

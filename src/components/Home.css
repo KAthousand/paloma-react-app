@@ -8,23 +8,23 @@
 }
 
 .home-container {
-  background-color: var(--color-pink);
+  background-color: var(--color-light-green);
   box-shadow: 10px 10px 15px var(--color-dark);
-  border-radius: 10px;
+  border-radius: 20px;
   display: flex;
   align-items: flex-end;
   height: 75vh;
-  width: 80vw;
+  width: 85vw;
   left: -80vw;
   position: fixed;
-  top: 10vh;
+  top: 12vh;
   visibility: hidden;
   transition: visibility 1s, left 1s;
   transition-timing-function: cubic-bezier(0.82, 0.01, 0.77, 0.78);
 }
 .home-open {
   visibility: visible;
-  top: 13vh;
+  top: 12vh;
   left: 7.5vw;
   width: 85vw;
 }
@@ -60,7 +60,7 @@
   letter-spacing: 2px;
   color: var(--color-dark-green);
   position: fixed;
-  top: 40.5vh;
+  top: 39.5vh;
 }
 
 .random-header {

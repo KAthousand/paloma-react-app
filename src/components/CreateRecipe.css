@@ -1,15 +1,41 @@
 .create-recipe-container {
-  background-color: pink;
-  height: 80vh;
-  width: 0vw;
-  right: 0;
+  background-color: var(--color-light-pink);
+  height: 75vh;
+  width: 85vw;
+  right: -85vw;
   position: fixed;
-  top: 10vh;
+  top: 12vh;
   visibility: hidden;
-  transition: visibility 0.7s, width 0.7s;
+  transition: visibility 1s, right 1s;
   transition-timing-function: cubic-bezier(0.82, 0.01, 0.77, 0.78);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: 10px 10px 15px var(--color-dark);
 }
 .create-open {
   visibility: visible;
-  width: 100vw;
+  width: 85vw;
+  right: 7vw;
+}
+.create-content {
+  border: 2px solid red;
+  width: 80%;
+  /* position: fixed; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.create-title {
+  font-family: var(--font-header);
+  color: var(--color-dark-green);
+}
+.create-content input {
+  width: 80%;
+  margin: 5px 0 5px 25px;
+}
+.name {
+  width: 20%;
 }

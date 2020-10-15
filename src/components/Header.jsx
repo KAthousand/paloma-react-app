@@ -44,17 +44,27 @@ function Header(props) {
   return (
     <div className="header-container">
       <nav className="nav-bar-container">
-        <button>Logo</button>
-        <button onClick={() => setNav(!nav)}>Icon</button>
+        <h2 className="nav-logo">PALOMA</h2>
+        <button className="nav-icon" onClick={() => setNav(!nav)}>
+          &#9776;
+        </button>
       </nav>
       <div
         className={
           nav ? "nav-menu-container nav-is-open" : "nav-menu-container"
         }
       >
-        <button onClick={toggleHome}>Home</button>
-        <button onClick={toggleCreate}>Create Recipe</button>
-        <button onClick={toggleRecipes}>Recipes</button>
+        <div className="nav-button-container">
+          <button className="nav-button" onClick={toggleHome}>
+            Home
+          </button>
+          <button className="nav-button" onClick={toggleCreate}>
+            Create Recipe
+          </button>
+          <button className="nav-button" onClick={toggleRecipes}>
+            Recipes
+          </button>
+        </div>
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 .recipe-cards-container {
-  background-color: var(--color-light-green);
+  background-color: var(--color-pink);
   overflow-x: hidden;
   overflow-y: auto;
   display: flex;
@@ -8,8 +8,19 @@
 }
 
 .recipe-cards {
-  border: 2px solid purple;
+  border: 5px solid var(--color-pink);
+  border-radius: 15px;
+  box-shadow: 10px 10px 20px rgba(42, 42, 42, 0.25);
+  background-color: var(--color-light-pink);
+  color: var(--color-dark-green);
+  font-family: var(--font-header);
+  font-size: 1em;
+  letter-spacing: 1px;
   width: 20vh;
   height: 20vh;
   margin: 20px;
+  transition: 1s;
+}
+.recipe-cards:hover {
+  opacity: 30%;
 }

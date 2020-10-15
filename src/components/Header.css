@@ -1,5 +1,5 @@
 .header-container {
-  background-color: var(--color-light-pink);
+  background-color: var(--color-light-green);
   height: 10vh;
   width: 100%;
   display: flex;
@@ -8,26 +8,93 @@
   z-index: 5;
 }
 .nav-bar-container {
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .nav-menu-container {
-  background-color: var(--color-light-pink);
+  background-color: var(--color-light-green);
   position: fixed;
   border-radius: 0 0 20px 20px;
   z-index: 5;
-  top: 10vh;
+  top: -40vh;
   left: 0;
-  height: 0vh;
+  height: 40vh;
   width: 100vw;
   visibility: hidden;
-  transition: visibility 0.7s, height 0.7s;
+  transition: visibility 0.7s, top 0.7s;
   transition-timing-function: cubic-bezier(0.82, 0.01, 0.77, 0.78);
 }
 
 .nav-is-open {
   visibility: visible;
   height: 40vh;
+  top: 10vh;
+}
+
+.nav-logo {
+  font-family: var(--font-display);
+  color: var(--color-light-pink);
+}
+
+.nav-icon {
+  border: 0;
+  height: 8vh;
+  width: 8vh;
+  border: 2px solid var(--color-dark-green);
+  border-radius: 15px;
+  font-size: 1.5em;
+  background-color: var(--color-light-green);
+  color: var(--color-dark-green);
+}
+.nav-icon:hover {
+  transform: rotate(270deg);
+  transition: 1s;
+  color: var(--color-light-green);
+  background-color: var(--color-dark-green);
+  border: 2px solid var(--color-pink);
+}
+
+.nav-button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  /* transition: 0.25s; */
+}
+.nav-button {
+  margin: 10px;
+  height: 7vh;
+  width: 80%;
+  border-radius: 5px;
+  border: none;
+  font-family: var(--font-header);
+  letter-spacing: 1px;
+  background-color: var(--color-dark-green);
+  color: var(--color-light-green);
+  /* transition: 0.25s; */
+}
+.nav-button:hover {
+  opacity: 50%;
+  /* background-color: var(--color-pink);
+  color: var(--color-light-green); */
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 0.1s;
+  animation-direction: alternate;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
 }
