@@ -20,22 +20,80 @@
   right: 7vw;
 }
 .create-content {
-  border: 2px solid red;
-  width: 80%;
+  width: 100%;
+  height: 100%;
   /* position: fixed; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+.create-title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-light-green);
+  border-radius: 0 0 20px 20px;
+  width: 100%;
+  height: 100%;
+}
 .create-title {
+  text-align: center;
   font-family: var(--font-header);
+  line-height: 65px;
+  font-size: 4em;
+  position: relative;
+  top: -5px;
   color: var(--color-dark-green);
+  text-shadow: var(--color-pink) 0px 0px 3px;
+  -webkit-font-smoothing: antialiased;
 }
-.create-content input {
-  width: 80%;
-  margin: 5px 0 5px 25px;
+.create-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 25px 0;
 }
-.name {
+.create-form input {
+  margin: 5px;
+  font-family: var(--font-content);
+  color: var(--color-dark-green);
+  background-color: var(--color-light);
+  border: 1.5px solid var(--color-pink);
+  border-radius: 3px;
+}
+.create-form-ingredients {
+  display: flex;
+  justify-content: center;
+}
+.amount {
   width: 20%;
+}
+.ingredients {
+  width: 57%;
+}
+.form-name,
+.form-garnish,
+.form-instructions,
+.form-glassware,
+.form-history,
+.form-category,
+.form-flavor-profile {
+  width: 80%;
+}
+.create-submit {
+  border: none;
+  border-radius: 10px;
+  margin-top: 25px;
+  height: 5vh;
+  width: 80%;
+  font-family: var(--font-header);
+  letter-spacing: 1px;
+  background-color: var(--color-pink);
+  color: var(--color-light-pink);
+  transition: 0.5s;
+}
+.create-submit:hover {
+  background-color: var(--color-dark-green);
 }
