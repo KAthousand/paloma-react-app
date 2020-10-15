@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Home.css";
 
 function Home(props) {
   const { recipes } = props;
   const { homeToggle } = props;
-  const randomNum = Math.floor(Math.random() * (recipes.length - 1));
-  const randomRecipe = recipes[randomNum];
+  let randomNum = Math.floor(Math.random() * (recipes.length - 1));
+  let randomRecipe = recipes[randomNum];
   // recipes[randomNum] && console.log(randomRecipe.fields);
   // setCardToggle(!cardToggle);
+
+  // useEffect(() => {
+  //   randomNum = Math.floor(Math.random() * (recipes.length - 1));
+  //   randomRecipe = recipes[randomNum];
+  // }, []);
 
   return (
     <div>

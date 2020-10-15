@@ -1,10 +1,31 @@
-.na-container-open {
+.na-container {
   height: 100vh;
   width: 100vh;
   z-index: 99;
-  position: absolute;
-  background-color: pink;
+  position: fixed;
+  bottom: -100vh;
+  background-color: var(--color-light-pink);
+  visibility: hidden;
+  transition: visibility 1s, left 1s;
+  transition-timing-function: cubic-bezier(0.82, 0.01, 0.77, 0.78);
 }
-.na-container h1 {
-  margin: 0;
+.na-open {
+  visibility: visible;
+  bottom: 0;
+}
+.na-content-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.na-content-container h1 {
+  font-family: var(--font-header);
+  color: var(--color-light-green);
+}
+.na-content-container {
+  font-family: var(--font-header);
+  color: var(--color-pink);
 }

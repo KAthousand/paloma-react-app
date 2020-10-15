@@ -22,14 +22,22 @@
   flex-direction: column;
   position: absolute;
 }
-.card-info {
+.card-info-content {
   position: relative;
+  width: 90vw;
   height: 70%;
   bottom: -30%;
   border-radius: 0 0 20px 20px;
   background-color: var(--color-light-green);
   color: var(--color-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-info {
   font-family: var(--font-italic);
+  width: 95%;
+  height: 95%;
   padding: 5px 10px;
   overflow-x: hidden;
   overflow-y: auto;
@@ -60,6 +68,7 @@
   font-size: 0.8em;
 }
 .card-ingredients {
+  margin-top: -10px;
   margin-bottom: 5px;
   width: 55%;
 }

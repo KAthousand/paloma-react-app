@@ -35,3 +35,6 @@ p {
   height: 100%;
   position: relative;
 }
+
+/* https://stackoverflow.com/questions/4919076/outline-effect-to-text 
+Referenced above to get text-shadow property info*/

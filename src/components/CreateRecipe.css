@@ -28,6 +28,13 @@
   justify-content: center;
   align-items: center;
 }
+.create-content-container {
+  width: 95%;
+  height: 70%;
+  margin: 10px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
 .create-title-container {
   display: flex;
   justify-content: center;
@@ -35,7 +42,7 @@
   background-color: var(--color-light-green);
   border-radius: 0 0 20px 20px;
   width: 100%;
-  height: 100%;
+  height: 30%;
 }
 .create-title {
   text-align: center;
@@ -64,6 +71,11 @@
   border-radius: 3px;
 }
 .create-form-ingredients {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.create-amount-ingredient-pair {
   display: flex;
   justify-content: center;
 }
@@ -96,4 +108,10 @@
 }
 .create-submit:hover {
   background-color: var(--color-dark-green);
+}
+.create-error {
+  color: red;
+  text-align: center;
+  font-family: var(--font-content);
+  font-size: 0.75em;
 }

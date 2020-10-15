@@ -57,7 +57,7 @@ function SearchBar(props) {
             onChange={(e) => setSearch(e.target.value)}
           />
           <button className="submit-search-button" type="Submit">
-            <i class="fa fa-search"></i>
+            <i className="fa fa-search"></i>
           </button>
         </form>
         <div
