@@ -56,6 +56,7 @@ function Recipes(props) {
         <h5>No results found</h5>
       </div>
       <button onClick={() => setClearSearch(!clearSearch)}>
+        {/* maybe make above a function to also set response to [] */}
         {response.length < 1 ? "Show All Recipes" : "Clear Search"}
       </button>
     </div>

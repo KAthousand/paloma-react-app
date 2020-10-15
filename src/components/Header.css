@@ -1,5 +1,5 @@
 .header-container {
-  background-color: green;
+  background-color: var(--color-light-pink);
   height: 10vh;
   width: 100%;
   display: flex;
@@ -8,15 +8,15 @@
   z-index: 5;
 }
 .nav-bar-container {
-  border: 2px solid red;
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
 
 .nav-menu-container {
-  background-color: green;
+  background-color: var(--color-light-pink);
   position: fixed;
+  border-radius: 0 0 20px 20px;
   z-index: 5;
   top: 10vh;
   left: 0;
@@ -29,5 +29,5 @@
 
 .nav-is-open {
   visibility: visible;
-  height: 80vh;
+  height: 40vh;
 }

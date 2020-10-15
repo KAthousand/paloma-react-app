@@ -1,5 +1,5 @@
 .search-container {
-  background-color: orange;
+  background-color: var(--color-light-green);
   height: 10vh;
   width: 100%;
   display: flex;
@@ -10,14 +10,13 @@
   bottom: 0;
 }
 .form-container {
-  border: 2px solid purple;
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
 .recipes-container {
-  background-color: orange;
+  background-color: var(--color-light-green);
   position: fixed;
   /* z-index: 1; */
   bottom: 10vh;

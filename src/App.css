@@ -1,5 +1,29 @@
+:root {
+  --font-display: "Bungee Shade", cursive;
+  --font-header: "Bungee", cursive;
+  --font-content: "Roboto", sans-serif;
+  --font-italic: "Piazzolla", serif;
+
+  --color-light-pink: rgb(242, 218, 241);
+  --color-pink: rgb(221, 162, 222);
+  --color-dark-pink: rgb(189, 96, 117);
+  --color-light-green: rgb(88, 155, 148);
+  --color-dark-green: rgb(38, 67, 69);
+  --color-dark: rgb(42, 42, 42);
+}
+
 * {
   box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
 }
 
 .hide {

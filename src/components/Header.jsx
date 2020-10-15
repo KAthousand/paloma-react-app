@@ -6,6 +6,7 @@ function Header(props) {
   const { recipeToggle, setRecipeToggle } = props;
   const { createToggle, setCreateToggle } = props;
   const { cardToggle, setCardToggle } = props;
+  const { homeToggle, setHomeToggle } = props;
   const { edit, setEdit } = props;
 
   const toggleRecipes = () => {
@@ -13,6 +14,7 @@ function Header(props) {
     !recipeToggle && setRecipeToggle(!recipeToggle);
     createToggle && setCreateToggle(!createToggle);
     cardToggle && setCardToggle(!cardToggle);
+    homeToggle && setHomeToggle(!homeToggle);
     edit && setEdit(!edit);
   };
 
@@ -21,11 +23,13 @@ function Header(props) {
     !createToggle && setCreateToggle(!createToggle);
     recipeToggle && setRecipeToggle(!recipeToggle);
     cardToggle && setCardToggle(!cardToggle);
+    homeToggle && setHomeToggle(!homeToggle);
     edit && setEdit(!edit);
   };
 
   const toggleHome = () => {
     setNav(!nav);
+    !homeToggle && setHomeToggle(!homeToggle);
     createToggle && setCreateToggle(!createToggle);
     recipeToggle && setRecipeToggle(!recipeToggle);
     cardToggle && setCardToggle(!cardToggle);

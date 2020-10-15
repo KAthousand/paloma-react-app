@@ -1,16 +1,58 @@
 .title-card-container {
+  color: var(--color-dark);
   height: 0vh;
   width: 100%;
   z-index: 100;
-  background-color: pink;
+  background-color: var(--color-light-green);
   position: fixed;
   top: 0;
   visibility: hidden;
   transition: visibility 0.7s, height 0.7s;
   transition-timing-function: cubic-bezier(0.82, 0.01, 0.77, 0.78);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .title-open {
   visibility: visible;
   height: 100vh;
+}
+
+.title-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.title-content h1 {
+  font-family: var(--font-display);
+}
+
+.title-content p {
+  font-family: var(--font-header);
+  color: var(--color-light-pink);
+  margin-top: 100px;
+}
+
+.title-buttons {
+  width: 100%;
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.title-button {
+  border: none;
+  border-radius: 5px;
+  font-family: var(--font-header);
+  background-color: var(--color-pink);
+  color: var(--color-light-pink);
+  height: 5vh;
+  width: 10vh;
+  padding: 5px 10px;
+}
+
+.title-button:hover {
+  background-color: var(--color-dark-green);
 }

@@ -23,12 +23,20 @@ function TitleCard(props) {
         titleCard ? "title-card-container" : "title-card-container title-open"
       }
     >
-      <h1>paloma</h1>
-      <p> are you old?</p>
-      <button onClick={oldEnough}>yes</button>
-      <Link to={"/non-alcoholic"}>
-        <button onClick={tooYoung}>no</button>
-      </Link>
+      <div className="title-content">
+        <h1>PALOMA</h1>
+        <p> Are you at least 21 years of age?</p>
+        <div className="title-buttons">
+          <button onClick={oldEnough} className="title-button">
+            yes
+          </button>
+          <Link to={"/non-alcoholic"}>
+            <button onClick={tooYoung} className="title-button">
+              no
+            </button>
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }

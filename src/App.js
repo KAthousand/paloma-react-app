@@ -59,6 +59,8 @@ function App() {
         setCreateToggle={setCreateToggle}
         cardToggle={cardToggle}
         setCardToggle={setCardToggle}
+        homeToggle={homeToggle}
+        setHomeToggle={setHomeToggle}
         edit={edit}
         setEdit={setEdit}
       />
