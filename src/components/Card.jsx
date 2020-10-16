@@ -10,7 +10,6 @@ function Card(props) {
   const { selection } = props;
   const { cardToggle, setCardToggle } = props;
   const { fetchRecipe, setFetchRecipe } = props;
-  // selection && console.log(selection.fields);
 
   const handleDelete = async () => {
     setDeleted(true);

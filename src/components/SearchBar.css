@@ -18,7 +18,6 @@
 .recipes-container {
   background-color: var(--color-pink);
   position: fixed;
-  /* z-index: 1; */
   bottom: 10vh;
   height: 0vh;
   width: 100vw;

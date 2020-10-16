@@ -1,7 +1,6 @@
 .update-container {
   background-color: var(--color-light-pink);
   position: fixed;
-  /* z-index: 1; */
   bottom: -50vh;
   height: 50vh;
   left: 0vh;
@@ -30,7 +29,6 @@
 .update-content {
   width: 95%;
   height: 43.5vh;
-  /* position: relative; */
   margin-bottom: 10px;
   align-items: center;
   overflow-x: hidden;

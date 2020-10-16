@@ -43,7 +43,6 @@ function SearchBar(props) {
     console.log(response);
   }, [response]);
 
-  // console.log(typeof search === "string");
   return (
     <div>
       <div className="search-container">
