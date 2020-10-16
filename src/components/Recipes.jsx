@@ -53,7 +53,7 @@ function Recipes(props) {
         />
       </div>
       <div className={clearSearch ? "search-resp-buttons" : "hide"}>
-        <div className="no-result">
+        <div className={response.length < 1 ? "no-result" : "hide"}>
           <h5>No results found</h5>
         </div>
         <button

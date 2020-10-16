@@ -33,6 +33,9 @@
   align-items: center;
 }
 .no-result {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
   color: var(--color-light-pink);
   font-family: var(--font-header);
   letter-spacing: 1px;
