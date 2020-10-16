@@ -80,9 +80,8 @@
   /* transition: 0.25s; */
 }
 .nav-button:hover {
-  opacity: 50%;
-  /* background-color: var(--color-pink);
-  color: var(--color-light-green); */
+  background-color: var(--color-pink);
+  color: var(--color-light-green);
 }
 
 .fade {
