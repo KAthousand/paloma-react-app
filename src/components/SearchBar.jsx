@@ -58,6 +58,7 @@ function SearchBar(props) {
           />
           <button className="submit-search-button" type="Submit">
             <i className="fa fa-search"></i>
+            {/* https://www.w3schools.com/howto/howto_css_search_button.asp */}
           </button>
         </form>
         <div
